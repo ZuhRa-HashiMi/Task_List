@@ -23,6 +23,14 @@ function addTask(e) {
         alert('add a task');
     }
 
+    // create li element
+    const li = document.createElement('li');
+    // Add Class
+    li.className = ('collection-item');
+    // create text node and append to the li
+    li.appendChild(document.createTextNode(taskInput.value));
+
+
     e.preventDefault();
 
 }
