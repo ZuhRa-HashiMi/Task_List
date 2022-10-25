@@ -15,14 +15,11 @@ function loadEventListeners() {
     // Add task event
     form.addEventListener('submit', addTask);
 }
-
 // Add Task
-
 function addTask(e) {
     if (taskInput.value === '') {
         alert('add a task');
     }
-
     // create li element
     const li = document.createElement('li');
     // Add Class
@@ -30,7 +27,6 @@ function addTask(e) {
     // create text node and append to the li
     li.appendChild(document.createTextNode(taskInput.value));
     // create new link element 
-
     const link = document.createElement('a');
     // Add class
     link.className = 'delete-item secondary-content';
@@ -40,14 +36,8 @@ function addTask(e) {
     li.appendChild(link);
     // append li to the ul
     taskList.appendChild(li);
-
     // clear input
-
-    taskList.value = '';
-
-
-
-
+    taskInput.value = '';
     e.preventDefault();
 
 }
